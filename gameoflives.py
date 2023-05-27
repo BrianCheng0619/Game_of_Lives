@@ -156,7 +156,7 @@ def run_game(init_coords_white, init_coords_red, win_width=800,win_height=600,ce
 
 # testing ------------------------------------------------------------------------------------------------------------------------
 import random
-from Reward import calculate_reward
+from nn import calculate_reward
 init_points_white, init_points_red = [],[]
 
 
