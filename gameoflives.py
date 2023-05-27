@@ -156,13 +156,17 @@ def run_game(init_coords_white, init_coords_red, win_width=800,win_height=600,ce
 
 # testing ------------------------------------------------------------------------------------------------------------------------
 import random
-init_points_white, init_points_red = [],[]
 
+
+CELL_COL, CELL_ROW = int(80),int(60)
+
+
+init_points_white, init_points_red = [],[]
 for i in range(1000):
-    y1, x1 = random.randint(0, 39), random.randint(0, 59)
-    y2, x2 = random.randint(0, 39), random.randint(0, 59)
+    y1, x1 = random.randint(0, CELL_COL/2-1), random.randint(0, CELL_ROW-1)
+    y2, x2 = random.randint(0, CELL_COL/2-1), random.randint(0, CELL_ROW-1)
     init_points_white.append([y1, x1])
-    init_points_red.append([y2 + 40, x2])
+    init_points_red.append([y2 + int(CELL_COL/2), x2])
 
 
 
