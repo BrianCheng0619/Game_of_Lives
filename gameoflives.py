@@ -156,6 +156,7 @@ def run_game(init_coords_white, init_coords_red, win_width=800,win_height=600,ce
 
 # testing ------------------------------------------------------------------------------------------------------------------------
 import random
+from nn import calculate_reward
 init_points_white, init_points_red = [],[]
 
 for i in range(1000):
@@ -163,6 +164,7 @@ for i in range(1000):
     y2, x2 = random.randint(0, 39), random.randint(0, 59)
     init_points_white.append([y1, x1])
     init_points_red.append([y2 + 40, x2])
+    print(calculate_reward(init_points_white, init_points_red, x1,y1))
 
 
 
